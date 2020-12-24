@@ -1,0 +1,10 @@
+directories:
+  output: dist
+  buildResources: build
+appId: your.id
+win:
+  target: portable
+extraResources:
+  - filter:
+      - ./database.db
+electronVersion: 11.1.0
