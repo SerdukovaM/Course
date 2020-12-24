@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link rel="stylesheet" href="./css/defaults.css">
+</head>
+<body>
+
+    <div class="wrapper valign-wrapper">
+
+        <!-- Floating Action (Exit) Button. Modal Trigger -->
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large red" id="exit-btn" href="#exit-modal">
+                <i class="large material-icons">
+                    <img src="./icons/close-white.svg" alt="Выход из игры">
+                </i>
+            </a>
+        </div>
+
+        <!-- Modal with Exit action -->
+        <div id="exit-modal" class="modal bottom-sheet">
+            <div class="modal-content">
+                <h4 class="center-align">Выход из игры</h4>
+                <p class="center-align flow-text">Вы уверены, что хотите закрыть приложение?</p>
+            </div>
+            <div class="modal-footer" style="text-align: center;">
+                <button class="modal-close btn grey" type="button">Отмена</button>
+                <button class="modal-close btn red" id="exit-confirm-btn" type="button">Выйти</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h1 class="center-align">Agar.io</h1>
+                </div>
+            </div>
+            <div class="row">
+                <form class="col s6 offset-s3">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="Введите ваш псевдоним..." id="nickname" type="text" class="validate">
+                            <label for="nickname">Псевдоним</label>
+                            <span class="helper-text" data-error="Длина псевдонима должна лежать в диапазоне [1-16]"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <select id="difficulty">
+                                <option value="0" selected>Легко</option>
+                                <option value="1">Сложно</option>
+                            </select>
+                            <label>Сложность</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="center-align">
+                                <button class="btn-large waves-effect waves-light" id="back-btn" type="button">
+                                    <b>Назад</b>
+                                </button>
+                                <button class="btn-large waves-effect waves-light" id="start-game-btn" type="submit">
+                                    <b>Начать игру</b>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/materialize.min.js"></script>
+    <script src="./js/application-exit-handler.js"></script>
+    <script src="./js/play.js"></script>
+</body>
+</html>

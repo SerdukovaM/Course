@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link rel="stylesheet" href="./css/defaults.css">
+    <link rel="stylesheet" href="./css/game.css">
+</head>
+<body>
+    <!-- Floating Action (Exit) Button. Modal Trigger -->
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red" id="exit-btn" href="#exit-modal">
+            <i class="large material-icons">
+                <img src="./icons/close-white.svg" alt="Выход из игры">
+            </i>
+        </a>
+    </div>
+
+    <!-- Modal with Exit action -->
+    <div id="exit-modal" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h4 class="center-align">Выход из игры</h4>
+            <p class="center-align flow-text">Вы уверены, что хотите выйти из игры?</p>
+        </div>
+        <div class="modal-footer" style="text-align: center;">
+            <button class="modal-close btn grey" type="button">Отмена</button>
+            <button class="modal-close btn back-btn" type="button">В главное меню</button>
+            <button class="modal-close btn red" id="exit-confirm-btn" type="button">Выйти</button>
+        </div>
+    </div>
+
+    <!-- Modal with Win action -->
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <h4 class="center-align">Вы выиграли!</h4>
+        </div>
+        <div class="modal-footer" style="text-align: center;">
+            <button class="modal-close btn" id="win-btn" type="button">ОК!</button>
+        </div>
+    </div>
+
+    <!-- Modal with Lose action -->
+    <div id="lose-modal" class="modal">
+        <div class="modal-content">
+            <h4 class="center-align">Вы проиграли :(</h4>
+        </div>
+        <div class="modal-footer" style="text-align: center;">
+            <button class="modal-close btn back-btn" type="button">ОК!</button>
+        </div>
+    </div>
+
+    <div id="stopwatch">0 сек</div>
+
+    <script src="./js/materialize.min.js"></script>
+    <script src="./js/application-exit-handler.js"></script>
+    <script src="./js/game.js"></script>
+    <script src="../game/main.js" type="module"></script>
+</body>
+</html>

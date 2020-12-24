@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link rel="stylesheet" href="./css/defaults.css">
+</head>
+<body>
+
+    <div class="wrapper valign-wrapper">
+
+        <!-- Floating Action (Exit) Button. Modal Trigger -->
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large red" id="exit-btn" href="#exit-modal">
+                <i class="large material-icons">
+                    <img src="./icons/close-white.svg" alt="Выход из игры">
+                </i>
+            </a>
+        </div>
+
+        <!-- Modal with Exit action -->
+        <div id="exit-modal" class="modal bottom-sheet">
+            <div class="modal-content">
+                <h4 class="center-align">Выход из игры</h4>
+                <p class="center-align flow-text">Вы уверены, что хотите закрыть приложение?</p>
+            </div>
+            <div class="modal-footer" style="text-align: center;">
+                <button class="modal-close btn grey" type="button">Отмена</button>
+                <button class="modal-close btn red" id="exit-confirm-btn" type="button">Выйти</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h1 class="center-align">Рекорды</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <table class="centered stripped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Псевдоним</th>
+                                <th>Сложность</th>
+                                <th>Результат</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="center-align">
+                        <button class="btn waves-effect waves-light" id="back-btn" type="button">
+                            <b>Назад</b>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/materialize.min.js"></script>
+    <script src="./js/application-exit-handler.js"></script>
+    <script src="./js/records.js"></script>
+</body>
+</html>
