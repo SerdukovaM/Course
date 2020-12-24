@@ -1,0 +1,36 @@
+{
+  "name": "agario",
+  "productName": "Agario game",
+  "version": "1.0.0",
+  "description": "A small Desktop Agar.io Game",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "package-win": "electron-packager . agario --overwrite --asar --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Agario game\"",
+    "postinstall": "electron-builder install-app-deps",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "your.id",
+    "win": {
+      "target": "portable"
+    },
+    "extraResources": [
+      "./database.db"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.1.0",
+    "electron-builder": "^22.9.1",
+    "electron-reload": "^1.5.0"
+  },
+  "dependencies": {
+    "electron-store": "^6.0.1",
+    "sqlite3": "^5.0.0",
+    "victor": "^1.1.0"
+  }
+}

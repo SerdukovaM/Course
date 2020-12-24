@@ -1,0 +1,38 @@
+{
+    "game": {
+        "stopwatchTimer": 1000
+    },
+    "world": {
+        "width": 3000,
+        "height": 3000,
+        "color": "#BBDEFB",
+        "secondaryColor": "#FFFFFF"
+    },
+    "player": {
+        "start": {
+            "positionX": 0,
+            "positionY": 0,
+            "radius": 64
+        },
+        "color": "#03A9F4",
+        "strokeColor": "#FFFFFF",
+        "nicknameColor": "#212121"
+    },
+    "bot": {
+        "start": {
+            "radius": 64
+        },
+        "amount": 10,
+        "nickname": "Bot",
+        "color": "#00BCD4",
+        "strokeColor": "#FFFFFF",
+        "nicknameColor": "#212121"
+    },
+    "food": {
+        "amount": 100,
+        "radius": 16,
+        "color": "#1976D2",
+        "strokeColor": "#FFFFFF",
+        "respawnTimer": 10000
+    }
+}
